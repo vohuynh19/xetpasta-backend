@@ -4,9 +4,9 @@ FROM node:18
 # Create a user and switch to it
 RUN useradd -m -u 1000 user
 USER user
-
-# Set the working directory
+ENV PATH="/home/user/.local/bin:$PATH"
 WORKDIR /app
+
 
 # Copy package.json and package-lock.json
 COPY --chown=user ./package*.json ./
