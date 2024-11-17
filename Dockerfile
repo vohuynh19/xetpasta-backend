@@ -20,6 +20,9 @@ COPY --chown=node . $HOME/app
 # Loading Dependencies
 RUN npm install
 
+# Build the NestJS application
+RUN npm run build
+
 # Expose the port the app runs on
 EXPOSE 3000
 
