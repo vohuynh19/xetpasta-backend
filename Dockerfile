@@ -27,4 +27,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Command to run the application
-CMD ["sh", "-c", "node dist/main &"]
+CMD ["sh", "-c", "npm run start:prod > app.log 2>&1 & disown"]
